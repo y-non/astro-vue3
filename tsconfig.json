@@ -2,6 +2,24 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
-    "jsx": "preserve"
-  }
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "allowJs": true,
+    "plugins": [{
+      "name": "@astrojs/ts-plugin"
+    }],
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"],
+      "@constants/*": ["src/constants/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
+      "@plugins/*": ["src/plugins/*"],
+      "@stores/*": ["src/stores/*"],
+      "@styles/*": ["src/styles/*"],
+      "@types/*": ["src/types/*"],
+    }
+  },
+  "include": ["src/**/*"]
 }
