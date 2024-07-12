@@ -4,22 +4,6 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import LayoutComponent from "../components/LayoutComponent.vue";
-
-/* test pinia implementation */
-import { createPinia } from "pinia";
-import { createApp, h } from "vue";
-
-// This function will initialize Pinia and the Vue app
-const initializeVueApp = () => {
-  const pinia = createPinia();
-  const app = createApp({});
-  app.use(pinia);
-  app.mount("#vue-app");
-};
-
-if (typeof window !== "undefined") {
-  initializeVueApp();
-}
 ---
 
 <!doctype html>
@@ -30,9 +14,7 @@ if (typeof window !== "undefined") {
     </head>
     <body>
       <Header />
-      <main>
-        <LayoutComponent client:visible />
-      </main>
+      <main></main>
       <Footer />
     </body>
   </div>
