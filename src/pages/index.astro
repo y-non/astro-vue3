@@ -2,7 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { siteConfig } from "@/config";
 import LayoutComponent from "../components/LayoutComponent.vue";
 ---
 
@@ -10,7 +10,7 @@ import LayoutComponent from "../components/LayoutComponent.vue";
 <html lang="en">
   <div id="vue-app">
     <head>
-      <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+      <BaseHead title={siteConfig.title} description={siteConfig.subtitle} />
     </head>
     <body>
       <Header />
